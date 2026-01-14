@@ -30,7 +30,13 @@ public class Main {
  
  
         // TODO: Declare your variables here
- 
+        String weather;
+	    String precipitation;
+	    String windSpeed;
+	    double dailyHigh;
+	    double dailyLow;
+	    int uv;
+
  
         /*
         STEP 2: Get input from the user using Scanner
@@ -38,7 +44,8 @@ public class Main {
         - Validate numeric input using loops
         - Example: Ensure highTemp >= lowTemp
         */
- 
+        
+        
  
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
