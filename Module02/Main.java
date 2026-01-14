@@ -142,6 +142,15 @@ class Student {
     // STEP 9: Increment / Decrement / Compound assignment example
     void updateGPA() {
         // TODO: Demonstrate ++, --, +=, -= with GPA
+        System.out.println("Original GPA: " + gpa);
+        gpa++;
+        System.out.println("Update GPA After increment: " + gpa);
+        gpa += 0.5;
+        System.out.println("Update GPA After compund addition assignement: " + gpa);
+        gpa--;
+        System.out.println("Update GPA After decrement: " + gpa);
+        gpa -= 0.2;
+        System.out.println("Update GPA After compound decrement assignement: " + gpa);
     }
 }
  
@@ -176,6 +185,8 @@ public class Main {
         s1.printNumbersUpToGPA();
         s1.printMultiplesOfID();
         s1.printSemesterGPA();
+        s1.enterGPAs();
+        s1.updateGPA();
     }
 }
  
