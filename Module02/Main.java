@@ -158,6 +158,7 @@ public class Main {
         s1.gradeDescription();
         s1.printNumbersUpToGPA();
         s1.printMultiplesOfID();
+        s1.printSemesterGPA();
     }
 }
  
