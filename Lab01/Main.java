@@ -53,17 +53,40 @@ public class Main {
 	    precipitation = input.nextLine();
 	    System.out.println("Wind speed:");
 	    windSpeed = input.nextLine();
+
         // TODO: Use loops to validate high/low temperatures and UV index
- 
+        System.out.println("Daily high temperature:");
+	    dailyHigh = input.nextDouble();
+	    System.out.println("Daily low temperature:");
+	    dailyLow = input.nextDouble();
+
+	    //daily temperature verification
+	    while(dailyHigh < dailyLow){
+		    System.out.println("Invalid daily low and/or high temperature!!");
+		    System.out.println("Daily low needs to be lower than the high temperature");
+		    System.out.println("Please inform again... Daily high temperature:");
+		    dailyHigh = input.nextDouble();
+		    System.out.println("Daily low temperature:");
+		    dailyLow = input.nextDouble();
+	    }
+
+ 	    System.out.println("UV index:");
+	    uv = input.nextInt();
+	    //uv verification
+	    while (uv < 0 || uv > 12) {
+    	    System.out.println("Invalid UV index!!");
+    	    System.out.println("UV index must be between 0 and 11");
+    	    System.out.println("Please enter a valid UV index:");
+    	    uv = input.nextInt();
+        }
  
         /*
         STEP 3: Typecasting (if needed)
         - Example: if you read a double but want to display as int
         */
  
- 
         // TODO: Apply typecasting where necessary
- 
+        
  
         /*
         STEP 4: Conditional statements
@@ -72,10 +95,10 @@ public class Main {
           - If precipitation >= 50%, suggest "Carry an umbrella"
           - If wind speed > 40 km/h, suggest "Windy conditions"
         */
- 
- 
+
         // TODO: Write if, if-else, or nested if statements to display tips
- 
+
+
  
         /*
         STEP 5: Create a fullReport String
