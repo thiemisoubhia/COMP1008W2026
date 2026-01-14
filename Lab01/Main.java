@@ -44,10 +44,15 @@ public class Main {
         - Validate numeric input using loops
         - Example: Ensure highTemp >= lowTemp
         */
-        
-        
- 
+
         // TODO: Prompt user and read input
+        System.out.println("---Week 2 Lab: Weather Report Program---");
+        System.out.println("Today's weather conditions:");
+	    weather = input.nextLine();
+ 	    System.out.println("Possibility of precipitation:");
+	    precipitation = input.nextLine();
+	    System.out.println("Wind speed:");
+	    windSpeed = input.nextLine();
         // TODO: Use loops to validate high/low temperatures and UV index
  
  
