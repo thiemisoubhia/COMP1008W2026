@@ -79,6 +79,8 @@ public class Main {
     	    System.out.println("Please enter a valid UV index:");
     	    uv = input.nextInt();
         }
+
+        input.close();
  
         /*
         STEP 3: Typecasting (if needed)
