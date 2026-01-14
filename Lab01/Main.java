@@ -86,8 +86,9 @@ public class Main {
         */
  
         // TODO: Apply typecasting where necessary
+        int dailyHighInt = (int) dailyHigh;
+	    int dailyLowInt = (int) dailyLow;
         
- 
         /*
         STEP 4: Conditional statements
         - Example: 
