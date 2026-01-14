@@ -103,9 +103,25 @@ class Student {
     // STEP 8: For loop example
     void printMultiplesOfID() {
         // TODO: Use for loop to print multiples of ID
+        for(int i = 1; i <= 5; i++){
+            System.out.println(id*1 + " ");
+        }
+        System.out.println();
     }
  
- 
+    // STEP 8.1: Enhace for loop:used to loop though arrays and objections easliy
+    //Also called for-each loop
+    //for (dataType variable : arrayName){}
+
+    void printSemesterGPA(){
+        double[] semesterGPA = {3.0, 3.5, 3.7};
+        System.out.println("Semester GPAs");
+        for(double g : semesterGPA){
+            System.out.println(g + " ");
+        }
+        System.out.println();
+    }
+
     // STEP 9: Increment / Decrement / Compound assignment example
     void updateGPA() {
         // TODO: Demonstrate ++, --, +=, -= with GPA
@@ -141,6 +157,7 @@ public class Main {
         s1.checkGPA();
         s1.gradeDescription();
         s1.printNumbersUpToGPA();
+        s1.printMultiplesOfID();
     }
 }
  
