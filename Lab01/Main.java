@@ -16,8 +16,9 @@ public class Main {
  
  
         Scanner input = new Scanner(System.in);
- 
- 
+        boolean answer = true;
+
+        do{
         /*
         STEP 1: Declare variables for weather information
         a) Today's weather conditions (String)
@@ -79,8 +80,6 @@ public class Main {
     	    System.out.println("Please enter a valid UV index:");
     	    uv = input.nextInt();
         }
-
-        input.close();
  
         /*
         STEP 3: Typecasting (if needed)
@@ -90,6 +89,9 @@ public class Main {
         // TODO: Apply typecasting where necessary
         int dailyHighInt = (int) dailyHigh;
 	    int dailyLowInt = (int) dailyLow;
+
+        //conversion
+        int precipitationInt = Integer.parseInt(precipitation);
         
         /*
         STEP 4: Conditional statements
@@ -100,8 +102,32 @@ public class Main {
         */
 
         // TODO: Write if, if-else, or nested if statements to display tips
+        String uvSuggestion, precipitationSuggestion;
 
+        //UV tips
+        if (uv >= 0 && uv <= 2) {
+            uvSuggestion = "UV level: Low";
+        } else if (uv <= 5) {
+            uvSuggestion = "UV level: Moderate";
+        } else if (uv <= 7) {
+            uvSuggestion = "UV level: High - Use sunscreen";
+        } else if (uv <= 10) {
+            uvSuggestion = "UV level: Very High - Use sunscreen";
+        } else {
+            uvSuggestion = "UV level: Extreme - Use sunscreen";
+        }
 
+        System.out.println(uvSuggestion);
+
+        //Precipitation tips
+        if (precipitationInt <= 30) {
+            precipitationSuggestion = "No rain expected today";
+        } else if (uv <= 60) {
+            precipitationSuggestion = "Carry an umbrella";
+        } else {
+            precipitationSuggestion = "Rainy day ahead!!";
+        }
+        System.out.println(precipitationSuggestion);
  
         /*
         STEP 5: Create a fullReport String
@@ -111,7 +137,13 @@ public class Main {
  
  
         // TODO: Construct your full weather report here
- 
+        String fullWeather = "Weather Report:\n" +
+              "Today's weather: " + weather + "\n" +
+              "Precipitation: " + precipitation + "\n" +
+              "Wind speed: " + windSpeed + "\n" +
+              "Temperature: " + dailyLowInt + "°C - " + dailyHighInt + "°C\n" +
+              "UV index: " + uv + "\n" +
+              uvSuggestion + precipitationSuggestion;
  
         /*
         STEP 6: Print the full weather report
@@ -119,19 +151,27 @@ public class Main {
  
  
         // TODO: Output your report using System.out.println()
- 
+        System.out.println("---Weather Full Report---");
+        System.out.println(fullWeather);
  
         /*
         STEP 7: Optional extra challenge
         - Use loops to ask if the user wants to enter another day's report
         - Continue until the user types "no"
         */
+        System.out.println("Would you like to enter another day's report? ");
+        if (answer) {
+            
+        }
  
  
         // TODO: Implement loop for multiple reports
  
  
         input.close();
+        }while(answer == true);
+
+
     }
 }
  
