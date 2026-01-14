@@ -98,6 +98,23 @@ class Student {
             count++;
         }
     }
+
+    // STEP 7.1: Do-While loop
+    void enterGPAs(){
+        Scanner input = new Scanner(System.in);
+        double gpaInput;
+
+        do{
+            System.out.println("Enter semester GPA, press -1 to stop");
+            gpaInput = input.nextDouble();
+
+            if(gpaInput != -1){
+                System.out.println("Recorded GPA:" + gpaInput);
+            }
+        }while(gpaInput != -1);
+        System.out.println("All semesters GPA are recorded");
+
+    }
  
  
     // STEP 8: For loop example
