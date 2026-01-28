@@ -29,7 +29,7 @@ class Book {
     }
 
     // Parameterized constructor
-    public Book(String title, String author, String isbn) {
+    public Book(String title, String author, String isbn, Boolean available) {
 
         if (title == null || title.trim().isEmpty() || author == null || author.trim().isEmpty()) {
             System.out.println("Title and author parameters cannot be empty");
@@ -44,7 +44,7 @@ class Book {
             this.isbn = isbn;
         }
 
-        this.available = true;
+        this.available = available;
     }
 
     // setters

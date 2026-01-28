@@ -46,6 +46,7 @@ public class LibraryManager {
                     break;
                 case 6:
                     break;
+                //exit the program
                 case 7:
                     System.out.println("Exiting program");
                     break;
@@ -99,4 +100,11 @@ public class LibraryManager {
 
     }
 
+    // 3. display available books
+
+    // 4. search books by author
+
+    // 5. check out a book
+
+    // 6. return a book
 }
