@@ -20,7 +20,7 @@ class Book {
      */
 
     // Default constructor
-     public Book() {
+    public Book() {
         this.title = "Title";
         this.author = "Author";
         this.isbn = "0000000000";
@@ -38,19 +38,59 @@ class Book {
         }
 
         if (isbn == null || !(isbn.length() >= 10 || isbn.length() <= 13)) {
-            System.out.println();
-        }else{
+            System.out.println("ISBN must follow a simple pattern (e.g., 10 or 13 characters)");
+        } else {
             this.isbn = isbn;
         }
-    
+
         this.available = true;
     }
 
-    //getters
-    public String getTitle() { return title; }
-    public String getAuthor() { return author; }
-    public String getIsbn() { return isbn; }
-    public boolean isAvailable() { return available; }
+    // setters
+    public void setTitle(String title) {
+        if (title == null) {
+            System.out.println("Title parameter cannot be empty");
+        } else {
+            this.title = title;
+        }
+    }
+
+    public void setAuthor(String author) {
+        if (author == null) {
+            System.out.println("Author parameter cannot be empty");
+        } else {
+            this.author = author;
+        }
+    }
+
+    public void setIsbn(String isbn) {
+         if (isbn == null || !(isbn.length() >= 10 || isbn.length() <= 13)) {
+            System.out.println();
+        } else {
+            this.isbn = isbn;
+        }
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    // getters
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
 
 }
 
