@@ -43,8 +43,8 @@ public class Lab4 {
 
         // print the list
         System.out.println("Grocery List");
-        for(String i : groceryList){
-            System.out.println("*"+i);
+        for (String i : groceryList) {
+            System.out.println("*" + i);
         }
 
         // ================================================
@@ -107,6 +107,9 @@ public class Lab4 {
         // ================================================
         System.out.println("Quantity of itens that start with a vowel: " + vowels);
 
-        
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        System.out.println(list.size());
     }
 }
