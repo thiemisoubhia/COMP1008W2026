@@ -51,7 +51,18 @@ public class Lab4 {
         // Remove one item by name or index
         // Print the updated ArrayList
         // ================================================
+        // add
+        groceryList.add("Bread");
+        groceryList.add("Soda");
 
+        // remove carrot
+        groceryList.remove(5);
+
+        // print the update list
+        System.out.println("The update Grocery List");
+        for (String i : groceryList) {
+            System.out.println("*" + i);
+        }
 
         // ================================================
         // STEP 5: Count how many items start with a vowel
