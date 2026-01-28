@@ -7,7 +7,10 @@ package COMP1008W2026.Assignment01;
 // -------------------------
 class Book{
     // Instance variables (private for encapsulation)
-    
+    private String title;
+    private String author;
+    private String isbn;
+    private boolean available;   
 }
 
 // -------------------------
