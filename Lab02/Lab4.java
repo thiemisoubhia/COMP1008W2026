@@ -4,8 +4,6 @@ package COMP1008W2026.Lab02;
 // Lines beginning with 
 // // are comments — feel free to keep them.
 
-// Thiemi Soubhia Doi - 200645138
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -20,6 +18,10 @@ public class Lab4 {
         // Add at least 6 items to the array
         // Example: {"Milk", "Eggs", "Bread", ... }
         // ================================================
+        String[] groceries = {
+                // TODO: Fill in your grocery items
+                "Pasta", "Apples", "Chocolates", "Lettuce", "Cookies", "Carrots"
+        };
 
         // ================================================
         // STEP 2: Print the array using Arrays.toString()
