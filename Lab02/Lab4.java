@@ -4,6 +4,8 @@ package COMP1008W2026.Lab02;
 // Lines beginning with 
 // // are comments — feel free to keep them.
 
+//Thiemi Soubhia Doi - 200645138
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -70,8 +72,39 @@ public class Lab4 {
         // Use .toLowerCase(). startsWith()
         // ================================================
 
+        // variable to count the vowels
+        int vowels = 0;
+
+        for (String i : groceryList) {
+            // A
+            if (i.toLowerCase().startsWith("a")) {
+                vowels++;
+            }
+
+            // E
+            if (i.toLowerCase().startsWith("e")) {
+                vowels++;
+            }
+
+            // I
+            if (i.toLowerCase().startsWith("i")) {
+                vowels++;
+            }
+
+            // O
+            if (i.toLowerCase().startsWith("o")) {
+                vowels++;
+            }
+
+            // U
+            if (i.toLowerCase().startsWith("u")) {
+                vowels++;
+            }
+        }
+
         // ================================================
         // STEP 6: Print the final results
         // ================================================
+        System.out.println("Quantity of itens that start with a vowel: " + vowels);
     }
 }
