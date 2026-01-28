@@ -15,9 +15,10 @@ class Book {
     /**
      * Constructor to initialize Book object
      * 
-     * @param title Book's name and @param author Author's name cannot be empty
-     * @param isbn  must follow a simple pattern (e.g., 10 or 13 characters)
-     */
+     * @param title  Book's name (cannot be empty)
+     * @param author Author's name (cannot be empty)
+     * @param isbn   ISBN must be 10 or 13 characters
+     **/
 
     // Default constructor
     public Book() {
@@ -30,14 +31,14 @@ class Book {
     // Parameterized constructor
     public Book(String title, String author, String isbn) {
 
-        if (author == null || title == null) {
+        if (title == null || title.trim().isEmpty() || author == null || author.trim().isEmpty()) {
             System.out.println("Title and author parameters cannot be empty");
         } else {
             this.title = title;
             this.author = author;
         }
 
-        if (isbn == null || !(isbn.length() >= 10 || isbn.length() <= 13)) {
+        if (isbn == null || !(isbn.length() == 10 || isbn.length() == 13)) {
             System.out.println("ISBN must follow a simple pattern (e.g., 10 or 13 characters)");
         } else {
             this.isbn = isbn;
@@ -48,7 +49,7 @@ class Book {
 
     // setters
     public void setTitle(String title) {
-        if (title == null) {
+        if (title == null || title.trim().isEmpty()) {
             System.out.println("Title parameter cannot be empty");
         } else {
             this.title = title;
@@ -56,7 +57,7 @@ class Book {
     }
 
     public void setAuthor(String author) {
-        if (author == null) {
+        if (author == null || author.trim().isEmpty()) {
             System.out.println("Author parameter cannot be empty");
         } else {
             this.author = author;
@@ -64,7 +65,7 @@ class Book {
     }
 
     public void setIsbn(String isbn) {
-         if (isbn == null || !(isbn.length() >= 10 || isbn.length() <= 13)) {
+        if (isbn == null || !(isbn.length() == 10 || isbn.length() == 13)) {
             System.out.println();
         } else {
             this.isbn = isbn;
@@ -90,6 +91,15 @@ class Book {
 
     public boolean isAvailable() {
         return available;
+    }
+
+    // displayInfo method
+    void displayInfo() {
+        System.out.println("Book Information:");
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("ISBN: " + isbn);
+        System.out.println("Available: " + (available ? "Yes" : "No"));
     }
 
 }
