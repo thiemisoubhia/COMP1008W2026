@@ -101,12 +101,4 @@ class Book {
         System.out.println("ISBN: " + isbn);
         System.out.println("Available: " + (available ? "Yes" : "No"));
     }
-
-}
-
-// -------------------------
-// MAIN CLASS
-// -------------------------
-public class Main {
-
 }
