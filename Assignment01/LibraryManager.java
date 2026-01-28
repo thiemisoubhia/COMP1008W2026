@@ -36,7 +36,7 @@ public class LibraryManager {
                     displayBooks(books);
                     break;
                 case 3:
-
+                    availableBooks(books);
                     break;
                 case 4:
 
@@ -46,7 +46,7 @@ public class LibraryManager {
                     break;
                 case 6:
                     break;
-                //exit the program
+                // exit the program
                 case 7:
                     System.out.println("Exiting program");
                     break;
@@ -101,6 +101,15 @@ public class LibraryManager {
     }
 
     // 3. display available books
+    public static void availableBooks(ArrayList<Book> books) {
+        System.out.println("***Books Available***");
+        for (Book b : books) {
+            if (b.isAvailable() == true) {
+                System.out.print("*");
+                b.displayInfo();
+            }
+        }
+    }
 
     // 4. search books by author
 
