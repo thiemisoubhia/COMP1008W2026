@@ -33,7 +33,7 @@ public class LibraryManager {
                     addBook(books, sc);
                     break;
                 case 2:
-
+                    displayBooks(books);
                     break;
                 case 3:
 
@@ -87,4 +87,16 @@ public class LibraryManager {
         books.add(newBook);
 
     }
+
+    // 2. display all books
+    public static void displayBooks(ArrayList<Book> books) {
+
+        System.out.println("\n--- All Books ---");
+
+        for (Book b : books) {
+            b.displayInfo();
+        }
+
+    }
+
 }
