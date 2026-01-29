@@ -119,20 +119,96 @@ public class LibraryManager {
 
         ArrayList<Book> bookFound = new ArrayList<>();
 
-        //for to check all the indexes
-        for(Book b : books){
-            if (nameAuthor == b.getAuthor()) {
+        // for to check all the indexes
+        for (Book b : books) {
+            if (nameAuthor.equalsIgnoreCase(b.getAuthor())) {
                 bookFound.add(b);
                 b.displayInfo();
             }
         }
 
-        if(bookFound == null){
+        if (bookFound.isEmpty()) {
             System.out.println("Books not found!!");
         }
     }
 
     // 5. check out a book
+    public static void checkoutBook(ArrayList<Book> books, Scanner sc) {
+        System.out.println("Please select which information is going to be provided to return the book: ");
+        System.out.println("1. Title");
+        System.out.println("2. Author");
+        System.out.println("3. ISBN");
+
+        String search = sc.nextLine();
+        boolean found = false;
+        
+        switch (Integer.parseInt(search)) {
+            case 1:
+                System.out.println("Please inform the TITLE:");
+                String title = sc.nextLine();
+
+                for (Book b : books) {
+                    if (title.equalsIgnoreCase(b.getTitle())) {
+                        found = true;
+
+                        if (b.isAvailable()) {
+                            b.setAvailable(false);
+                            System.out.println("Book checked out successfully!");
+                        } else {
+                            System.out.println("This book is already checked out.");
+                        }
+                        break;
+                    }
+                }
+                break;
+
+            case 2:
+                System.out.println("Please inform the AUTHOR:");
+                String author = sc.nextLine();
+
+                for (Book b : books) {
+                    if (author.equalsIgnoreCase(b.getAuthor())) {
+                        found = true;
+
+                        if (b.isAvailable()) {
+                            b.setAvailable(false);
+                            System.out.println("Book checked out successfully!");
+                        } else {
+                            System.out.println("This book is already checked out.");
+                        }
+                        break;
+                    }
+                }
+                break;
+
+            case 3:
+                System.out.println("Please inform the ISBN:");
+                String isbn = sc.nextLine();
+
+                for (Book b : books) {
+                    if (isbn.equalsIgnoreCase(b.getIsbn())) {
+                        found = true;
+
+                        if (b.isAvailable()) {
+                            b.setAvailable(false);
+                            System.out.println("Book checked out successfully!");
+                        } else {
+                            System.out.println("This book is already checked out.");
+                        }
+                        break;
+                    }
+                }
+                break;
+
+            default:
+                System.out.println("Invalid option.");
+                return;
+        }
+
+    }
 
     // 6. return a book
+    public static void checkinBook(ArrayList<Book> books, Scanner sc) {
+
+    }
 }

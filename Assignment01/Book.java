@@ -1,5 +1,8 @@
 package COMP1008W2026.Assignment01;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 //Thiemi Soubhia Doi - 200645138
 
 // -------------------------
