@@ -141,7 +141,7 @@ public class LibraryManager {
 
         String search = sc.nextLine();
         boolean found = false;
-        
+
         switch (Integer.parseInt(search)) {
             case 1:
                 System.out.println("Please inform the TITLE:");
@@ -210,5 +210,28 @@ public class LibraryManager {
     // 6. return a book
     public static void checkinBook(ArrayList<Book> books, Scanner sc) {
 
+        System.out.println("Please inform the ISBN of the book to return:");
+        String isbn = sc.nextLine();
+
+        boolean found = false;
+
+        for (Book b : books) {
+            if (isbn.equalsIgnoreCase(b.getIsbn())) {
+                found = true;
+
+                if (!b.isAvailable()) {
+                    b.setAvailable(true);
+                    System.out.println("Book returned successfully!");
+                } else {
+                    System.out.println("This book was not checked out.");
+                }
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Book not found.");
+        }
     }
+
 }
