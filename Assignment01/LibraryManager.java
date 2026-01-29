@@ -39,7 +39,7 @@ public class LibraryManager {
                     availableBooks(books);
                     break;
                 case 4:
-
+                    searchBooks(books, sc);
                     break;
                 case 5:
 
@@ -102,7 +102,7 @@ public class LibraryManager {
 
     // 3. display available books
     public static void availableBooks(ArrayList<Book> books) {
-        System.out.println("***Books Available***");
+        System.out.println("---Books Available---");
         for (Book b : books) {
             if (b.isAvailable() == true) {
                 System.out.print("*");
@@ -112,6 +112,25 @@ public class LibraryManager {
     }
 
     // 4. search books by author
+    public static void searchBooks(ArrayList<Book> books, Scanner sc) {
+        System.out.println("---Search Books---");
+        System.out.println("Please type the name of the author:");
+        String nameAuthor = sc.nextLine();
+
+        ArrayList<Book> bookFound = new ArrayList<>();
+
+        //for to check all the indexes
+        for(Book b : books){
+            if (nameAuthor == b.getAuthor()) {
+                bookFound.add(b);
+                b.displayInfo();
+            }
+        }
+
+        if(bookFound == null){
+            System.out.println("Books not found!!");
+        }
+    }
 
     // 5. check out a book
 
