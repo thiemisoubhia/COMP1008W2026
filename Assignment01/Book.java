@@ -68,11 +68,10 @@ class Book {
     }
 
     public void setIsbn(String isbn) {
-        if (isbn == null || !(isbn.length() == 10 || isbn.length() == 13)) {
-            System.out.println();
-        } else {
-            this.isbn = isbn;
-        }
+        while (isbn == null || !(isbn.length() == 10 || isbn.length() == 13)) {
+            System.out.println("ISBN must be 10 or 13 characters long.");
+        } 
+        this.isbn = isbn;
     }
 
     public void setAvailable(boolean available) {

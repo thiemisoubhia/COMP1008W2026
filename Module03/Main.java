@@ -1,3 +1,5 @@
+package COMP1008W2026.Module03;
+
 import java.util.Scanner;
  
  
