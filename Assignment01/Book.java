@@ -15,6 +15,8 @@ class Book {
     private String isbn;
     private boolean available;
 
+     Scanner sc = new Scanner(System.in);
+
     /**
      * Constructor to initialize Book object
      * 
@@ -70,6 +72,7 @@ class Book {
     public void setIsbn(String isbn) {
         while (isbn == null || !(isbn.length() == 10 || isbn.length() == 13)) {
             System.out.println("ISBN must be 10 or 13 characters long.");
+            isbn = sc.nextLine();
         } 
         this.isbn = isbn;
     }

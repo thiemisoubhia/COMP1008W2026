@@ -43,9 +43,10 @@ public class LibraryManager {
                     searchBooks(books, sc);
                     break;
                 case 5:
-
+                    checkoutBook(books, sc);
                     break;
                 case 6:
+                    checkinBook(books, sc);
                     break;
                 // exit the program
                 case 7:
@@ -71,7 +72,7 @@ public class LibraryManager {
         System.out.print("Insert the ISBN: ");
         newBook.setIsbn(sc.nextLine());
 
-        System.out.print("The book is available? 1-YES 2-NO");
+        System.out.print("The book is available? 1-YES 2-NO ");
         String check = sc.nextLine();
 
         // verifying 1 for TRUE and 2 for FALSE
@@ -157,68 +158,77 @@ public class LibraryManager {
         String search = sc.nextLine();
         boolean found = false;
 
-        switch (Integer.parseInt(search)) {
-            case 1:
-                System.out.println("Please inform the TITLE:");
-                String title = sc.nextLine();
+        do {
+            switch (Integer.parseInt(search)) {
+                case 1:
+                    System.out.println("Please inform the TITLE:");
+                    String title = sc.nextLine();
 
-                for (Book b : books) {
-                    if (title.equalsIgnoreCase(b.getTitle())) {
-                        found = true;
-
-                        if (b.isAvailable()) {
-                            b.setAvailable(false);
-                            System.out.println("Book checked out successfully!");
-                        } else {
-                            System.out.println("This book is already checked out.");
+                    for (Book b : books) {
+                        if (title.equalsIgnoreCase(b.getTitle())) {
+                            found = true;
+                            if (b.isAvailable()) {
+                                b.setAvailable(false);
+                                System.out.println("Book checked out successfully!");
+                                break;
+                            } else {
+                                System.out.println("This book is already checked out.");
+                                break;
+                            }
                         }
-                        break;
                     }
-                }
-                break;
+                    break;
 
-            case 2:
-                System.out.println("Please inform the AUTHOR:");
-                String author = sc.nextLine();
+                case 2:
+                    System.out.println("Please inform the AUTHOR:");
+                    String author = sc.nextLine();
 
-                for (Book b : books) {
-                    if (author.equalsIgnoreCase(b.getAuthor())) {
-                        found = true;
-
-                        if (b.isAvailable()) {
-                            b.setAvailable(false);
-                            System.out.println("Book checked out successfully!");
-                        } else {
-                            System.out.println("This book is already checked out.");
+                    for (Book b : books) {
+                        if (author.equalsIgnoreCase(b.getAuthor())) {
+                            found = true;
+                            if (b.isAvailable()) {
+                                b.setAvailable(false);
+                                System.out.println("Book checked out successfully!");
+                                break;
+                            } else {
+                                System.out.println("This book is already checked out.");
+                                break;
+                            }
                         }
-                        break;
                     }
-                }
-                break;
+                    break;
 
-            case 3:
-                System.out.println("Please inform the ISBN:");
-                String isbn = sc.nextLine();
+                case 3:
+                    System.out.println("Please inform the ISBN:");
+                    String isbn = sc.nextLine();
 
-                for (Book b : books) {
-                    if (isbn.equalsIgnoreCase(b.getIsbn())) {
-                        found = true;
+                    for (Book b : books) {
+                        if (isbn.equalsIgnoreCase(b.getIsbn())) {
+                            found = true;
 
-                        if (b.isAvailable()) {
-                            b.setAvailable(false);
-                            System.out.println("Book checked out successfully!");
-                        } else {
-                            System.out.println("This book is already checked out.");
+                            if (b.isAvailable()) {
+                                b.setAvailable(false);
+                                System.out.println("Book checked out successfully!");
+                                break;
+                            } else {
+                                System.out.println("This book is already checked out.");
+                                break;
+                            }
                         }
-                        break;
                     }
-                }
-                break;
+                    break;
 
-            default:
-                System.out.println("Invalid option.");
-                return;
-        }
+                default:
+                    System.out.println(
+                            "Invalid option... Please select which information is going to be provided to return the book:");
+                    System.out.println("1. Title");
+                    System.out.println("2. Author");
+                    System.out.println("3. ISBN");
+
+                    search = sc.nextLine();
+
+            }
+        } while (Integer.parseInt(search) != 1 && Integer.parseInt(search) != 2 && Integer.parseInt(search) != 3);
 
     }
 
