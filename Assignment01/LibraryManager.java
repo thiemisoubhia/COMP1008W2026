@@ -1,6 +1,7 @@
 package COMP1008W2026.Assignment01;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 // -------------------------
@@ -91,12 +92,26 @@ public class LibraryManager {
 
     // 2. display all books
     public static void displayBooks(ArrayList<Book> books) {
+        Collections.sort(books, (b1, b2) -> b1.getTitle().compareToIgnoreCase(b2.getTitle()));
 
         System.out.println("\n--- All Books ---");
 
+        int availableCount = 0;
+        int checkedOutCount = 0;
+
         for (Book b : books) {
             b.displayInfo();
+
+            if (b.isAvailable()) {
+                availableCount++;
+            } else {
+                checkedOutCount++;
+            }
         }
+
+        System.out.println("\nSummary:");
+        System.out.println("Available books: " + availableCount);
+        System.out.println("Checked-out books: " + checkedOutCount);
 
     }
 
