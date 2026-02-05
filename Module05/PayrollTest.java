@@ -23,6 +23,11 @@ public class PayrollTest {
 
         CommissionEmployee emp = new CommissionEmployee(empFirst, empLast, empSocialNumber, empGross, empCommission);
 
-       
+        // TODO 10: Display employee details
+        System.out.println(emp.toString());
+
+        // TODO 11: Display earnings
+        System.out.println("Earnings: " + emp.earnings());
+        scanner.close();
     }
 }
