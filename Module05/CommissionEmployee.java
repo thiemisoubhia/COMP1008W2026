@@ -39,10 +39,20 @@ public class CommissionEmployee extends Employee {
         }
     }
 
+      // TODO 7: Override earnings()
     @Override
     public double earnings() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'earnings'");
+        double earningTotal= getGrossSales() * getCommissionRate();
+        return earningTotal;
+    }
+
+    // TODO 8: Override toString()
+    @Override
+    public String toString() {
+        return String.format(
+                "%s%nGross Sales: %.2f%nCommission Rate: %.2f",
+                super.toString(), grossSales, commissionRate
+        );
     }
 
 }
