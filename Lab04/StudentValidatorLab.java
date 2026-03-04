@@ -127,6 +127,7 @@ public class StudentValidatorLab {
 
         // STEP 12:
         // Create string: "Invoice number is 4567 and total is 890"
+        String invoice = "Invoice number is 4567 and total is 890";
         // Use Pattern and Matcher to extract all numbers
 
         scanner.close();
