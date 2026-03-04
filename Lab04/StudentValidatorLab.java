@@ -104,6 +104,8 @@ public class StudentValidatorLab {
 
         // STEP 10:
         // Replace all digits in sentence with '*'
+        String replaced = sentence.replaceAll("\\d", "*");
+        System.out.println("Sentence with digits replaced: " + replaced);
 
         // =====================================================
         // PART 5 — TOKENIZING
