@@ -75,6 +75,7 @@ public class StudentValidatorLab {
 
         System.out.println("Valid email");
 
+        
         // =====================================================
         // PART 4 — SENTENCE PROCESSING
         // =====================================================
