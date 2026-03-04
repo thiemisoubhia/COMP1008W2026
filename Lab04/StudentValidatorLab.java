@@ -80,6 +80,22 @@ public class StudentValidatorLab {
 
         // STEP 8:
         // Count vowels using Character class
+        int vowelCount = 0;
+
+        for (int i = 0; i < sentence.length(); i++) {
+            //access each letter of the string using charAt
+            char ch = sentence.charAt(i);
+
+            if (Character.isLetter(ch)) {
+                ch = Character.toLowerCase(ch);
+
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowelCount++;
+                }
+            }
+        }
+
+        System.out.println("Number of vowels: " + vowelCount);
 
         // STEP 9:
         // Reverse sentence using StringBuilder
