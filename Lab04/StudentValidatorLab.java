@@ -1,10 +1,9 @@
 package COMP1008W2026.Lab04;
+
 import java.util.*;
 import java.util.regex.*;
- 
 
 // Thiemi Soubhia Doi - 200645138
-
 
 public class StudentValidatorLab {
  
@@ -31,7 +30,13 @@ public class StudentValidatorLab {
         // Only letters and spaces allowed
         // Use regex with matches()
         
- 
+        if (fullName.matches("[a-zA-Z ]+")) {
+            System.out.println("Valid name");
+        } else {
+            System.out.println("Invalid name");
+            System.out.println("Name must contain only letters and spaces");
+        }
+
  
  
         // =====================================================
@@ -124,7 +129,4 @@ public class StudentValidatorLab {
  
  
         scanner.close();
-    }
-}
- 
- 
+    }}
