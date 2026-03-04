@@ -132,7 +132,6 @@ public class StudentValidatorLab {
 
         // setting pattern to llok for digits \\d+ = one or more digits
         Pattern pattern = Pattern.compile("\\d+");
-        
         Matcher matcher = pattern.matcher(invoice);
 
         while (matcher.find()) {
@@ -141,5 +140,6 @@ public class StudentValidatorLab {
 
         //close scanner
         scanner.close();
+
     }
 }
