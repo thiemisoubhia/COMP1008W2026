@@ -58,6 +58,8 @@ public class StudentValidatorLab {
 
         // STEP 5:
         // Ask user to enter email
+        System.out.println("Please inform your email: ");
+        String email = scanner.nextLine();
 
         // STEP 6:
         // Validate email format
