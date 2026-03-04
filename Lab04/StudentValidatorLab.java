@@ -130,6 +130,16 @@ public class StudentValidatorLab {
         String invoice = "Invoice number is 4567 and total is 890";
         // Use Pattern and Matcher to extract all numbers
 
+        // setting pattern to llok for digits \\d+ = one or more digits
+        Pattern pattern = Pattern.compile("\\d+");
+        
+        Matcher matcher = pattern.matcher(invoice);
+
+        while (matcher.find()) {
+            System.out.println("Found number: " + matcher.group());
+        }
+
+        //close scanner
         scanner.close();
     }
 }
