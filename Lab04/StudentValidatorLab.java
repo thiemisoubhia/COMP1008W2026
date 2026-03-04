@@ -1,3 +1,4 @@
+package COMP1008W2026.Lab04;
 import java.util.*;
 import java.util.regex.*;
  
@@ -21,15 +22,15 @@ public class StudentValidatorLab {
  
         // STEP 1:
         // Ask user to enter full name
- 
- 
+        System.out.println("Please inform your full name: ");
+        String fullName = scanner.nextLine();
  
  
         // STEP 2:
         // Validate name
         // Only letters and spaces allowed
         // Use regex with matches()
- 
+        
  
  
  
