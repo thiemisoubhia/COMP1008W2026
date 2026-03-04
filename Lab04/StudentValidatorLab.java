@@ -83,7 +83,7 @@ public class StudentValidatorLab {
         int vowelCount = 0;
 
         for (int i = 0; i < sentence.length(); i++) {
-            //access each letter of the string using charAt
+            // access each letter of the string using charAt
             char ch = sentence.charAt(i);
 
             if (Character.isLetter(ch)) {
@@ -99,6 +99,8 @@ public class StudentValidatorLab {
 
         // STEP 9:
         // Reverse sentence using StringBuilder
+        StringBuilder reversed = new StringBuilder(sentence);
+        reversed.reverse();
 
         // STEP 10:
         // Replace all digits in sentence with '*'
