@@ -68,13 +68,15 @@ public class StudentValidatorLab {
             System.out.println("Invalid email");
             System.out.println("Email must be in a valid format (example: name@email.com)");
         }
-        
+
         // =====================================================
         // PART 4 — SENTENCE PROCESSING
         // =====================================================
 
         // STEP 7:
         // Ask user to enter a sentence
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
 
         // STEP 8:
         // Count vowels using Character class
