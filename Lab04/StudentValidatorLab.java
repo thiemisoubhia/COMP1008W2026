@@ -50,8 +50,7 @@ public class StudentValidatorLab {
             System.out.println("Invalid student ID");
             System.out.println("Format must be: S-1234");
         }
-        
-        
+
         // =====================================================
         // PART 3 — EMAIL VALIDATION
         // =====================================================
@@ -63,7 +62,13 @@ public class StudentValidatorLab {
 
         // STEP 6:
         // Validate email format
-
+        if (email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z.-]+$")) {
+            System.out.println("Valid email");
+        } else {
+            System.out.println("Invalid email");
+            System.out.println("Email must be in a valid format (example: name@email.com)");
+        }
+        
         // =====================================================
         // PART 4 — SENTENCE PROCESSING
         // =====================================================
