@@ -25,12 +25,14 @@ public class StudentValidatorLab {
         // Only letters and spaces allowed
         // Use regex with matches()
 
-        if (fullName.matches("[a-zA-Z ]+")) {
-            System.out.println("Valid name");
-        } else {
+        while (!(fullName.matches("[a-zA-Z ]+"))) {
             System.out.println("Invalid name");
             System.out.println("Name must contain only letters and spaces");
+
+            System.out.println("Please inform your full name: ");
+            fullName = scanner.nextLine();
         }
+        System.out.println("Valid name");
 
         // =====================================================
         // PART 2 — STUDENT ID VALIDATION
@@ -44,12 +46,14 @@ public class StudentValidatorLab {
 
         // STEP 4:
         // Validate format using regex
-        if (studentID.matches("S-\\d{4}")) {
-            System.out.println("Valid student ID");
-        } else {
+        while (!studentID.matches("S-\\d{4}")) {
             System.out.println("Invalid student ID");
             System.out.println("Format must be: S-1234");
+            System.out.print("Please inform your student ID: ");
+            studentID = scanner.nextLine();
         }
+
+        System.out.println("Valid Student ID");
 
         // =====================================================
         // PART 3 — EMAIL VALIDATION
@@ -62,12 +66,14 @@ public class StudentValidatorLab {
 
         // STEP 6:
         // Validate email format
-        if (email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z.-]+$")) {
-            System.out.println("Valid email");
-        } else {
+        while (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z.-]+$")) {
             System.out.println("Invalid email");
             System.out.println("Email must be in a valid format (example: name@email.com)");
+            System.out.print("Please inform your email: ");
+            email = scanner.nextLine();
         }
+
+        System.out.println("Valid email");
 
         // =====================================================
         // PART 4 — SENTENCE PROCESSING
@@ -138,7 +144,7 @@ public class StudentValidatorLab {
             System.out.println("Found number: " + matcher.group());
         }
 
-        //close scanner
+        // close scanner
         scanner.close();
 
     }
