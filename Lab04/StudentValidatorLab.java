@@ -113,8 +113,13 @@ public class StudentValidatorLab {
 
         // STEP 11:
         // Create string: "Math,Science,Java,English"
+        String courses = "Math,Science,Java,English";
         // Split using comma
+        String[] courseArray = courses.split(",");
         // Print each course
+        for (String course : courseArray) {
+            System.out.println(course);
+        }
 
         // =====================================================
         // PART 6 — PATTERN & MATCHER
