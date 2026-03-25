@@ -44,7 +44,7 @@ public class CalculatorApp extends Application {
 
         // Step 6: Event handling for buttons
 
-        //addition
+        // addition
         addBtn.setOnAction(e -> {
             try {
                 double num1 = Double.parseDouble(input1.getText());
@@ -55,23 +55,41 @@ public class CalculatorApp extends Application {
             }
         });
 
-        //substraction
+        // substraction
         subBtn.setOnAction(e -> {
             try {
                 double num1 = Double.parseDouble(input1.getText());
                 double num2 = Double.parseDouble(input2.getText());
-                resultLabel.setText("Result: "+ (num1 - num2));
+                resultLabel.setText("Result: " + (num1 - num2));
             } catch (Exception ex) {
                 resultLabel.setText("Invalid input");
             }
         });
 
-        //multiplication
-         mulBtn.setOnAction(e -> {
+        // multiplication
+        mulBtn.setOnAction(e -> {
             try {
                 double num1 = Double.parseDouble(input1.getText());
                 double num2 = Double.parseDouble(input2.getText());
-                resultLabel.setText("Result: "+ (num1 * num2));
+                resultLabel.setText("Result: " + (num1 * num2));
+            } catch (Exception ex) {
+                resultLabel.setText("Invalid input");
+            }
+        });
+
+
+        //division
+        divBtn.setOnAction(e -> {
+            try {
+                double num1 = Double.parseDouble(input1.getText());
+                double num2 = Double.parseDouble(input2.getText());
+
+                //not allow division by 0
+                if (num2 == 0) {
+                    resultLabel.setText("Error division by zero!!");
+                } else {
+                    resultLabel.setText("Result: " + (num1 / num2));
+                }
             } catch (Exception ex) {
                 resultLabel.setText("Invalid input");
             }
