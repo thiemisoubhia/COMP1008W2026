@@ -66,6 +66,16 @@ public class CalculatorApp extends Application {
             }
         });
 
+        //multiplication
+         mulBtn.setOnAction(e -> {
+            try {
+                double num1 = Double.parseDouble(input1.getText());
+                double num2 = Double.parseDouble(input2.getText());
+                resultLabel.setText("Result: "+ (num1 * num2));
+            } catch (Exception ex) {
+                resultLabel.setText("Invalid input");
+            }
+        });
 
         // Step 7: Create scene and show stage
 
