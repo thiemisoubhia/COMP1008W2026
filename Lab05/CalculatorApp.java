@@ -77,14 +77,13 @@ public class CalculatorApp extends Application {
             }
         });
 
-
-        //division
+        // division
         divBtn.setOnAction(e -> {
             try {
                 double num1 = Double.parseDouble(input1.getText());
                 double num2 = Double.parseDouble(input2.getText());
 
-                //not allow division by 0
+                // not allow division by 0
                 if (num2 == 0) {
                     resultLabel.setText("Error division by zero!!");
                 } else {
@@ -96,7 +95,10 @@ public class CalculatorApp extends Application {
         });
 
         // Step 7: Create scene and show stage
-
+        Scene scene = new Scene(root, 300, 200);
+        primaryStage.setTitle("Simple Calculator");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
