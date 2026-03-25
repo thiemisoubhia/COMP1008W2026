@@ -33,7 +33,8 @@ public class CalculatorApp extends Application {
         Button divBtn = new Button("/");
  
         // Step 3: Create Label for result
-       
+       Label resultLabel = new Label("Result");
+
         // Step 4: HBox for buttons
        
         // Step 5: VBox main layout
