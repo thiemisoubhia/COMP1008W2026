@@ -27,7 +27,10 @@ public class CalculatorApp extends Application {
 
  
         // Step 2: Create Buttons for operations
-        
+        Button addBtn = new Button("+");
+        Button subBtn = new Button("-");
+        Button mulBtn = new Button("*");
+        Button divBtn = new Button("/");
  
         // Step 3: Create Label for result
        
